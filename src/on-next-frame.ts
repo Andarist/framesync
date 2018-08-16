@@ -11,7 +11,7 @@ const onNextFrame = hasRAF
     const currentTime = Date.now();
     const timeToCall = Math.max(0, 16.7 - (currentTime - prevTime));
     prevTime = currentTime + timeToCall;
-    setTimeout(() => callback(prevTime), timeToCall);
+    setTimeout(callback, timeToCall, prevTime);
   };
 
 export default onNextFrame;
